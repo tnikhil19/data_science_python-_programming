@@ -1,27 +1,52 @@
-from src.data_cleaning import load_csv, clean_rows, save_cleaned_csv
-from src.analysis import create_summary_report
+from src.data_cleaning import (
+    load_csv,
+    clean_rows,
+    save_cleaned_csv
+)
+
+from src.analysis import (
+    dataset_overview,
+    risk_distribution,
+    study_habits_by_risk
+)
+
 from src.visualization import create_all_charts
 
+from src.report import create_summary_report
 
 
-DATA_FILE = "data_science_python-_programming/data/raw/hybrid_student_performance.csv"
-CLEANED_FILE = "data_science_python-_programming/data/cleaned/cleaned_student_data.csv"
-REPORT_FILE = "data_science_python-_programming/outputs/summary_report.txt"
+RAW_FILE = "data_science_python-_programming/data/raw/hybrid_student_performance.csv"
+CLEAN_FILE = "data_science_python-_programming/data/processed/cleaned_student_performance.csv"
+
 CHART_FOLDER = "data_science_python-_programming/outputs/charts"
+REPORT_FILE = "data_science_python-_programming/outputs/student_report.txt"
 
 
 def main():
-    rows, headers = load_csv(DATA_FILE)
+
+    rows, headers = load_csv(RAW_FILE)
+
     cleaned_rows = clean_rows(rows)
 
-    save_cleaned_csv(cleaned_rows, headers, CLEANED_FILE)
-    create_summary_report(cleaned_rows, REPORT_FILE)
-    create_all_charts(cleaned_rows, CHART_FOLDER)
+    save_cleaned_csv(
+        cleaned_rows,
+        headers,
+        CLEAN_FILE
+    )
 
-    print("Project completed successfully.")
-    print("Cleaned data saved to:", CLEANED_FILE)
-    print("Summary report saved to:", REPORT_FILE)
-    print("Charts saved to:", CHART_FOLDER)
+    print(dataset_overview(cleaned_rows))
+
+    create_all_charts(
+        cleaned_rows,
+        CHART_FOLDER
+    )
+
+    create_summary_report(
+        cleaned_rows,
+        REPORT_FILE
+    )
+
+    print("Analysis completed successfully.")
 
 
 if __name__ == "__main__":
