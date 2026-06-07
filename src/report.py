@@ -11,29 +11,27 @@ def create_summary_report(rows, file_name):
 
     lines = []
 
-    lines.append("Student Performance Analysis Report")
-    lines.append("=" * 40)
+    lines.append("# Student Performance Analysis Report")
     lines.append("")
 
-    lines.append("Risk Distribution")
+    lines.append("## Risk Distribution")
+    lines.append("")
 
     for risk, count in risk_counts.items():
-        lines.append(f"{risk}: {count}")
+        lines.append(f"- **{risk}**: {count}")
 
     lines.append("")
-    lines.append("Study Habits By Risk")
+    lines.append("## Study Habits by Risk Level")
+    lines.append("")
 
     for metric, values in habits.items():
 
-        lines.append("")
-        lines.append(metric)
+        lines.append(f"### {metric.replace('_', ' ').title()}")
 
         for risk, value in values.items():
-            lines.append(
-                f"{risk}: {round(value, 2)}"
-            )
+            lines.append(f"- **{risk}**: {round(value, 2)}")
+
+        lines.append("")
 
     with open(file_name, "w", encoding="utf-8") as file:
-
-        for line in lines:
-            file.write(line + "\n")
+        file.write("\n".join(lines))

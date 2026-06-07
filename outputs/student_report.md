@@ -1,0 +1,24 @@
+# Student Performance Analysis Report
+
+## Risk Distribution
+
+- **Moderate Risk**: 572
+- **High Risk**: 452
+- **Low Risk**: 176
+
+## Study Habits by Risk Level
+
+### Study Hours
+- **Moderate Risk**: 1.37
+- **High Risk**: 1.15
+- **Low Risk**: 1.59
+
+### Sleep Hours
+- **Moderate Risk**: 6.8
+- **High Risk**: 6.59
+- **Low Risk**: 6.82
+
+### Stress Level
+- **Moderate Risk**: 3.01
+- **High Risk**: 3.77
+- **Low Risk**: 2.04

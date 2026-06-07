@@ -19,7 +19,7 @@ RAW_FILE = "data_science_python-_programming/data/raw/hybrid_student_performance
 CLEAN_FILE = "data_science_python-_programming/data/processed/cleaned_student_performance.csv"
 
 CHART_FOLDER = "data_science_python-_programming/outputs/charts"
-REPORT_FILE = "data_science_python-_programming/outputs/student_report.txt"
+REPORT_FILE = "data_science_python-_programming/outputs/student_report.md"
 
 
 def main():
