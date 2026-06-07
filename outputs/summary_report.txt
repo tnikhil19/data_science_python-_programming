@@ -1,0 +1,46 @@
+Student Performance Risk Analysis
+=================================
+
+Total cleaned records: 1200
+
+Analysis 1: Risk Level Distribution
+- Moderate Risk: 572
+- High Risk: 452
+- Low Risk: 176
+
+Analysis 2: Average Factors by Risk Level
+Risk Level: Moderate Risk
+  Average study hours: 1.37
+  Average sleep hours: 6.8
+  Average stress level: 3.01
+  Average attendance percentage: 55.73
+Risk Level: High Risk
+  Average study hours: 1.15
+  Average sleep hours: 6.59
+  Average stress level: 3.77
+  Average attendance percentage: 59.96
+Risk Level: Low Risk
+  Average study hours: 1.59
+  Average sleep hours: 6.82
+  Average stress level: 2.04
+  Average attendance percentage: 45.37
+
+Analysis 3: Relationship Check
+- study_hours_daily vs sleep_hours: -0.01
+- study_hours_daily vs stress_level: -0.02
+- study_hours_daily vs attendance_percentage: -0.06
+- study_hours_daily vs daily_productivity: 0.03
+- study_hours_daily vs cgpa_category: 0.3
+- sleep_hours vs stress_level: -0.05
+- sleep_hours vs attendance_percentage: -0.04
+- sleep_hours vs daily_productivity: -0.0
+- sleep_hours vs cgpa_category: 0.01
+- stress_level vs attendance_percentage: 0.01
+- stress_level vs daily_productivity: -0.01
+- stress_level vs cgpa_category: -0.02
+- attendance_percentage vs daily_productivity: 0.06
+- attendance_percentage vs cgpa_category: -0.12
+- daily_productivity vs cgpa_category: 0.0
+
+Main finding:
+Students with better study habits, higher attendance, and stronger routine indicators generally appear closer to lower risk levels. Stress and lack of consistency are useful factors to watch.

@@ -3,10 +3,11 @@ from src.analysis import create_summary_report
 from src.visualization import create_all_charts
 
 
-DATA_FILE = "data/hybrid_student_performance.csv"
-CLEANED_FILE = "outputs/cleaned_student_data.csv"
-REPORT_FILE = "outputs/summary_report.txt"
-CHART_FOLDER = "outputs/charts"
+
+DATA_FILE = "data_science_python-_programming/data/raw/hybrid_student_performance.csv"
+CLEANED_FILE = "data_science_python-_programming/data/cleaned/cleaned_student_data.csv"
+REPORT_FILE = "data_science_python-_programming/outputs/summary_report.txt"
+CHART_FOLDER = "data_science_python-_programming/outputs/charts"
 
 
 def main():
