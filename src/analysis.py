@@ -173,8 +173,16 @@ def build_correlation_table(rows, columns):
 
 def dataset_overview(rows):
 
+    programs = set()
+
+    for row in rows:
+        programs.add(
+            row.get("program_stream", "Unknown")
+        )
+
     return {
         "total_records": len(rows),
+        "programs": len(programs),
         "risk_levels": count_by_category(
             rows,
             "performance_risk_level"
